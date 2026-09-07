@@ -1,0 +1,389 @@
+/* ==========================================================================
+   CursosMi - Components System (Cards, Buttons, Classroom, Quizzes & Forum)
+   ========================================================================== */
+
+/* Buttons & CTA System */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.25rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition-fast);
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background: var(--accent-gold);
+    color: var(--text-inverse);
+    font-weight: 700;
+}
+
+.btn-primary:hover {
+    background: var(--accent-gold-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
+}
+
+.btn-secondary {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    border-color: var(--border-medium);
+}
+
+.btn-secondary:hover {
+    background-color: var(--bg-card-hover);
+    border-color: var(--border-medium);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--accent-gold);
+    border-color: var(--accent-gold);
+}
+
+.btn-outline:hover {
+    background-color: rgba(245, 158, 11, 0.1);
+}
+
+.btn-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+}
+
+.btn-lg {
+    padding: 0.85rem 1.75rem;
+    font-size: 1rem;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* Role Badges */
+.badge-role {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-student {
+    background-color: rgba(59, 130, 246, 0.15);
+    color: var(--accent-blue);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.badge-creator {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: var(--accent-gold);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-admin {
+    background-color: rgba(244, 63, 94, 0.15);
+    color: var(--accent-rose);
+    border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+/* Glassmorphism Course Card */
+.course-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-normal);
+    position: relative;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--border-medium);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-banner-wrapper {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.card-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-normal);
+}
+
+.course-card:hover .card-banner-img {
+    transform: scale(1.05);
+}
+
+.card-category-badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    background: rgba(9, 13, 20, 0.8);
+    backdrop-filter: blur(8px);
+    color: var(--text-primary);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-subtle);
+}
+
+.card-body {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+}
+
+.card-skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: var(--space-md);
+}
+
+.skill-tag {
+    background-color: var(--bg-card);
+    color: var(--text-secondary);
+    font-size: 0.72rem;
+    padding: 0.15rem 0.45rem;
+    border-radius: var(--radius-sm);
+}
+
+.card-rating-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--accent-gold);
+    margin-bottom: var(--space-md);
+}
+
+.rating-count {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+}
+
+.card-footer {
+    margin-top: auto;
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price-tag {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--accent-gold);
+}
+
+/* Dual Classroom Component */
+.classroom-layout {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: var(--space-xl);
+}
+
+.player-container {
+    background-color: black;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    width: 100%;
+    margin-bottom: var(--space-md);
+}
+
+.player-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Classroom Sidebar Index */
+.classroom-sidebar {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+.lesson-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    margin-bottom: 0.35rem;
+    border: 1px solid transparent;
+}
+
+.lesson-item:hover {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+}
+
+.lesson-item.active {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--accent-gold);
+    border-color: var(--border-accent);
+}
+
+.lesson-status-icon {
+    font-size: 0.9rem;
+}
+
+.status-completed {
+    color: var(--accent-emerald);
+}
+
+.status-current {
+    color: var(--accent-gold);
+}
+
+.status-pending {
+    color: var(--text-muted);
+}
+
+/* Quiz Runner Form */
+.quiz-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-medium);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.quiz-option-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--bg-secondary);
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-subtle);
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    transition: var(--transition-fast);
+}
+
+.quiz-option-label:hover {
+    border-color: var(--accent-gold);
+    background-color: var(--bg-card-hover);
+}
+
+/* Student Field Logbook Timeline */
+.logbook-timeline {
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--border-medium);
+    margin-top: var(--space-md);
+}
+
+.logbook-entry {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.logbook-entry::before {
+    content: '';
+    position: absolute;
+    left: -1.95rem;
+    top: 0.2rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--accent-gold);
+    box-shadow: 0 0 8px var(--accent-gold);
+}
+
+/* Forum Thread & Community */
+.forum-thread-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.forum-reply-box {
+    margin-left: 1.5rem;
+    border-left: 2px solid var(--accent-blue);
+    padding-left: 1rem;
+    margin-top: 0.75rem;
+}
+
+/* Responsive Tables */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-subtle);
+}
+
+.table-custom {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.875rem;
+}
+
+.table-custom th {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    padding: 0.85rem 1rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-medium);
+}
+
+.table-custom td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+}
+
+.table-custom tr:hover td {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+@media (max-width: 992px) {
+    .classroom-layout {
+        grid-template-columns: 1fr;
+    }
+}
