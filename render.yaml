@@ -1,0 +1,36 @@
+# ==============================================================================
+# render.yaml - Configuración Blueprint para Despliegue en Render.com
+# ==============================================================================
+
+services:
+  - type: web
+    name: cursosmi-app
+    runtime: node
+    plan: starter
+    buildCommand: npm ci
+    startCommand: node server.js
+    disk:
+      name: cursosmi-storage
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_PATH
+        value: /data/database.sqlite
+      - key: UPLOADS_PATH
+        value: /data/uploads
+      - key: PORT
+        value: 3000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: MERCADOPAGO_PUBLIC_KEY
+        sync: false
+      - key: MERCADOPAGO_ACCESS_TOKEN
+        sync: false

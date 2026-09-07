@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CursosMi - Plataforma Educativa Profesional | Cursos de Barbería, Tech & Marketing</title>
+    <meta name="description" content="Plataforma de cursos en línea con 10 lecciones prácticas, PDFs descargables, exámenes quizzes, carpeta de campo y cobro directo por Mercado Pago.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Open Graph Social Meta Tags (WhatsApp, Instagram, Twitter, Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CursosMi - Cursos Profesional con Certificado Oficial y Mercado Pago">
+    <meta property="og:description" content="Capacítate con 10 módulos prácticos, guías PDF descargables, carpeta de campo y diplomas QR acreditados.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://cursosmi.com">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Modular CSS System -->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <!-- Brand Logo -->
+            <a href="#/" class="navbar-brand">
+                <img src="logo.png" alt="CursosMi Logo" class="brand-logo-img" onerror="this.style.display='none'" />
+                <span>Cursos<span class="brand-accent">Mi</span></span>
+            </a>
+
+            <!-- Real-Time Search Bar -->
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="navbar-search-input" class="search-input" placeholder="Buscar por curso, técnica o habilidad (ej. Barbería, Fade, Node.js)..." />
+            </div>
+
+            <!-- Quick Action Nav Links -->
+            <nav class="nav-actions">
+                <a href="#/" class="nav-link"><i class="fas fa-home"></i> Catálogo</a>
+                <a href="#/dashboard" class="nav-link"><i class="fas fa-book-reader"></i> Mis Cursos</a>
+                
+                <!-- Profile & Auth Selector Area -->
+                <div id="navbar-user-area" class="user-menu">
+                    <!-- Populated dynamically by app.js -->
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main View Dynamic Container -->
+    <main id="app-view">
+        <div class="container" style="padding-top: 4rem; text-align: center;">
+            <div class="spinner" style="width: 32px; height: 32px; border-width: 3px;"></div>
+            <p style="color: var(--text-muted); margin-top: 1rem;">Cargando plataforma CursosMi...</p>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <span style="font-family: var(--font-heading); font-weight: 800; color: white;">Cursos<span style="color: var(--accent-gold);">Mi</span></span>
+                <span>© 2026 Todos los derechos reservados.</span>
+            </div>
+
+            <div style="display: flex; gap: 1.5rem; font-size: 0.85rem;">
+                <a href="#/" style="color: var(--text-muted); text-decoration: none;">Términos & Condiciones</a>
+                <a href="#/" style="color: var(--text-muted); text-decoration: none;">Soporte Técnico</a>
+                <a href="#/dashboard" style="color: var(--accent-gold); text-decoration: none;">Verificar Certificado</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Application Entry (ES Modules) -->
+    <script type="module" src="assets/js/app.js"></script>
+
+</body>
+</html>

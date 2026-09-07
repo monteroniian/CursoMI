@@ -1,0 +1,24 @@
+# ==============================================================================
+# docker-compose.yml - CursosMi Plataforma Educativa (Producción / Local)
+# ==============================================================================
+
+version: '3.8'
+
+services:
+  cursosmi-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cursosmi_app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    volumes:
+      # Persistencia de la base de datos SQLite y comprobantes subidos
+      - ./database.sqlite:/app/database.sqlite
+      - ./uploads:/app/uploads
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
